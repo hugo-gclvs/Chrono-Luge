@@ -1,0 +1,13 @@
+// Contenu de la bdd
+photo/
+nom/
+prenom/
+pseudo/  UNIQUE
+age/
+mot de passe/  CRYPTE
+date/
+heure/
+temps/
+vitesse/
+n°Luge/
+tagRFID/
