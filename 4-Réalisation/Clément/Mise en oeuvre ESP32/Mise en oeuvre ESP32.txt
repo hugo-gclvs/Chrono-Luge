@@ -1,23 +1,12 @@
-https://docs.lora.tetaneutral.net/devices/heltec-esp32-lora-v2/
-
 PREPARATION DE L'ENVIRONNEMENT
 
+FICHIER > PREFERENCES > url GESTIONNAIRE DE CARTE : https://resource.heltec.cn/download/package_heltec_esp32_index.json
 https://www.youtube.com/watch?v=dk-01OpKYuQ
 
-bibliothèque : https://resource.heltec.cn/download/package_heltec_esp32_index.json
-
-Inclure les trois bibliothèques suivante : 
-https://resource.heltec.cn/download/package_heltec_esp32_index.json
-https://arduino.esp8266.com/stable/package_esp8266com_index.json
-https://dl.espressif.com/dl/package_esp32_index.json
-
-Inclure les bibliothèques du GitHub
-
-PRESENTATION LORA 
-868Mhz
+Copier/coller les bibliothèques présentes dans "my_librairies" vers "DOCUMENTS > ARDUINO > LIBRAIRIES" 
 
 
-https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
+
 
 UTILISATION LORA
 
@@ -25,3 +14,5 @@ https://randomnerdtutorials.com/esp32-lora-rfm95-transceiver-arduino-ide/
 
 
 RECEIVER CODE https://escapequotes.net/esp32-lora-send-receive-packet-test/ 
+
+
