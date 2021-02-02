@@ -17,18 +17,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
+    ui_chargement.cpp \
     ui_connexion.cpp \
     ui_inscription.cpp \
     ui_menu.cpp \
     ui_principale.cpp
 
 HEADERS += \
+    ui_chargement.h \
     ui_connexion.h \
     ui_inscription.h \
     ui_menu.h \
     ui_principale.h
 
 FORMS += \
+    ui_chargement.ui \
     ui_connexion.ui \
     ui_inscription.ui \
     ui_menu.ui \

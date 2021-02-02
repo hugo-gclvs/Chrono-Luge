@@ -23,10 +23,10 @@ class Ui_ui_Menu
 {
 public:
     QPushButton *button_CONNEXION;
-    QFrame *frame;
+    QFrame *bandeau_BLANC;
     QLabel *Logo;
-    QLabel *label;
-    QLabel *label_2;
+    QLabel *label_HISTORIQUE;
+    QLabel *label_PROFIL;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
 
@@ -41,39 +41,41 @@ public:
         button_CONNEXION->setGeometry(QRect(20, 100, 391, 41));
         QFont font;
         font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
         button_CONNEXION->setFont(font);
         button_CONNEXION->setStyleSheet(QString::fromUtf8("background: #6B6B6B;\n"
 "border: none;\n"
 "border-radius: 7px;\n"
 "color: rgb(240, 240, 240);"));
-        frame = new QFrame(ui_Menu);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(-10, -1, 451, 81));
-        frame->setStyleSheet(QString::fromUtf8("background-color: rgba(235, 235, 235, 0.9);"));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        Logo = new QLabel(frame);
+        bandeau_BLANC = new QFrame(ui_Menu);
+        bandeau_BLANC->setObjectName(QString::fromUtf8("bandeau_BLANC"));
+        bandeau_BLANC->setGeometry(QRect(-10, -1, 451, 81));
+        bandeau_BLANC->setStyleSheet(QString::fromUtf8("background-color: rgba(235, 235, 235, 0.9);"));
+        bandeau_BLANC->setFrameShape(QFrame::StyledPanel);
+        bandeau_BLANC->setFrameShadow(QFrame::Raised);
+        Logo = new QLabel(bandeau_BLANC);
         Logo->setObjectName(QString::fromUtf8("Logo"));
         Logo->setGeometry(QRect(10, 0, 111, 81));
         Logo->setStyleSheet(QString::fromUtf8("background: none;\n"
 "margin: 10px;"));
         Logo->setPixmap(QPixmap(QString::fromUtf8("../../../8-Ressources/Image/logo.png")));
         Logo->setScaledContents(true);
-        label = new QLabel(frame);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(120, 10, 221, 61));
+        label_HISTORIQUE = new QLabel(bandeau_BLANC);
+        label_HISTORIQUE->setObjectName(QString::fromUtf8("label_HISTORIQUE"));
+        label_HISTORIQUE->setGeometry(QRect(120, 10, 221, 61));
         QFont font1;
         font1.setPointSize(16);
-        label->setFont(font1);
-        label->setStyleSheet(QString::fromUtf8("background: none;\n"
+        label_HISTORIQUE->setFont(font1);
+        label_HISTORIQUE->setStyleSheet(QString::fromUtf8("background: none;\n"
 "color: rgba(0, 0, 0, 0.5);"));
-        label_2 = new QLabel(frame);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(350, -1, 91, 81));
-        label_2->setStyleSheet(QString::fromUtf8("background: none;\n"
+        label_PROFIL = new QLabel(bandeau_BLANC);
+        label_PROFIL->setObjectName(QString::fromUtf8("label_PROFIL"));
+        label_PROFIL->setGeometry(QRect(350, -1, 91, 81));
+        label_PROFIL->setStyleSheet(QString::fromUtf8("background: none;\n"
 "margin: 8px;"));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("../icon/profile.png")));
-        label_2->setScaledContents(true);
+        label_PROFIL->setPixmap(QPixmap(QString::fromUtf8("../icon/profile.png")));
+        label_PROFIL->setScaledContents(true);
         scrollArea = new QScrollArea(ui_Menu);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setGeometry(QRect(20, 160, 391, 561));
@@ -84,7 +86,7 @@ public:
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 391, 561));
         scrollArea->setWidget(scrollAreaWidgetContents);
-        frame->raise();
+        bandeau_BLANC->raise();
         button_CONNEXION->raise();
         scrollArea->raise();
 
@@ -98,8 +100,8 @@ public:
         ui_Menu->setWindowTitle(QCoreApplication::translate("ui_Menu", "Form", nullptr));
         button_CONNEXION->setText(QCoreApplication::translate("ui_Menu", "AJOUTER UNE DESCENTE", nullptr));
         Logo->setText(QString());
-        label->setText(QCoreApplication::translate("ui_Menu", "Historique de Descente", nullptr));
-        label_2->setText(QString());
+        label_HISTORIQUE->setText(QCoreApplication::translate("ui_Menu", "Historique de Descente", nullptr));
+        label_PROFIL->setText(QString());
     } // retranslateUi
 
 };
