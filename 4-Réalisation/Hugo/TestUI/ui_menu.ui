@@ -190,7 +190,7 @@ margin: 10px;</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="line_widget">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -208,7 +208,7 @@ border-top: 2px solid grey;</string>
        <string/>
       </property>
      </widget>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="fond1">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -227,7 +227,7 @@ border: none;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QFrame" name="frame_2">
+      <widget class="QFrame" name="fond2">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -242,7 +242,7 @@ border: none;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="titre_temps">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -259,7 +259,7 @@ color: #696969;</string>
          <string>TEMPS</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="titre_date">
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -276,7 +276,7 @@ color: #696969;</string>
          <string>DATE</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="line_temps">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -295,7 +295,7 @@ border-top: 1px solid grey;</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="line_date">
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -314,7 +314,7 @@ border-top: 1px solid grey;</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="line_vitesse">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -333,7 +333,7 @@ border-top: 1px solid grey;</string>
          <string/>
         </property>
        </widget>
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="titre_vitesse">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -350,7 +350,7 @@ color: #696969;</string>
          <string>VITESSE</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_8">
+       <widget class="QLabel" name="vitesse">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -372,7 +372,7 @@ color: #8A8A8A;</string>
          <string>12.25 km/h</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_9">
+       <widget class="QLabel" name="temps">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -394,7 +394,7 @@ color: #8A8A8A;</string>
          <string>02:12:59</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_10">
+       <widget class="QLabel" name="date">
         <property name="geometry">
          <rect>
           <x>200</x>
