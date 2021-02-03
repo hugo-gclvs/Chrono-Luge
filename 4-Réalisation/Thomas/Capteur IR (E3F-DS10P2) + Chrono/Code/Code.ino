@@ -6,10 +6,9 @@
    Cable noir : Signal (Pin 2)
 */
 /*
- * Presence devant le capteur = LOW
- * Rien devant le capteur = HIGH
+   Presence devant le capteur = LOW
+   Rien devant le capteur = HIGH
 */
-
 
 #define PINUN 4   // Pin correspondant au capteur en haut de la piste
 #define PINDEUX 5  // Pin correspondant au capteur en bas de la piste
@@ -35,7 +34,7 @@ void loop() {
       valeurCapteur = digitalRead(PINDEUX);
     }
     temps2 = millis();            // On stop le chrono
-    chrono = temps2 - temps1;     // calcul du chron
+    chrono = temps2 - temps1;     // calcul du chrono
     Serial.print("Chrono :");
     Serial.print(chrono);         //  Affichage du chrono
     Serial.println("");
