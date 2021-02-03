@@ -7,7 +7,7 @@ SSD1306  display(0x3c, 4, 15);
 #define SS      18
 #define RST     14
 #define DI0     26
-#define BAND    868E6 // fréquence utilisé pourr le Lora en Europe. 
+#define BAND    868E6 // fréquence utilisé pour le Lora en Europe. 
 
 void setup() {
   pinMode(16, OUTPUT);
@@ -30,38 +30,36 @@ void setup() {
     display.drawString(5, 25, "Connexion échouée");
     while (1);
   }
+  LoRa.setSyncWord(0xF3);
   Serial.println("Connecté");
   display.drawString(5, 25, "LoRa Initializing OK!");
   display.display();
 }
 void loop() {
-  double vitesse;
-  // try to parse packet
+  int flag=1;
   int packetSize = LoRa.parsePacket();
   if (packetSize) {
     // received a packets
-    Serial.print("Chrono :");//affiche si packet reçu
-    display.clear();
-    //display.setFont(ArialMT_Plain_16);
-    display.drawString(0, 0, "Chrono : ");
-    display.display();
+
     // read packet
     while (LoRa.available()) {
-      String data = LoRa.readString();//lire les packets reçus
-      Serial.println(data);
-      vitesse = data.toInt();
+      long data = LoRa.read();    //lire les packets reçus
+      if (data == '$') {
+        Serial.println("bit de start recu");
+      }
+    }
+    while (flag) {
+      packetSize = LoRa.parsePacket();
+      if (packetSize) {
+        // received a packets
 
-      vitesse = (vitesse / 1000);
-      display.drawString(0, 22, data);
-      display.drawString(55, 22, "ms");
-      vitesse = (650 / vitesse);
-      vitesse = (vitesse * 3.6);
-      data = String(vitesse);
-      display.display();
-      display.drawString(0, 45, data);
-      display.drawString(55, 45, "Km/h");
-      display.display();
-
+        // read packet
+        while (LoRa.available()) {
+          long data = LoRa.read();    //lire les packets reçus
+          Serial.println(data);
+          flag=0;
+        }
+      }
     }
   }
 }
