@@ -1,0 +1,12 @@
+debug/main.o
+debug/interfacebdd.o
+debug/interfacechrono.o
+debug/gestionchrono.o
+debug/gestionparametre.o
+debug/gestionvisualisationtempsvitesse.o
+debug/descente.o
+debug/luge.o
+debug/piste.o
+debug/profil.o
+debug/statistique.o
+debug/utilisateur.o
