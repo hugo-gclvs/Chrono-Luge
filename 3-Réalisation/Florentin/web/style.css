@@ -1,24 +1,258 @@
 html{
   
-    background: linear-gradient(#4FC715, #4476A8);
+    
     height:100%;
     
    
 }
 
-nav {
-    border-bottom: 1px solid black;
-}
+*{
+    margin: 0;
+    padding: 0;
+    
+  }
 
-.crumbs ol {
-    list-style-type: none;
-    padding-left: 0;
-}
+  .photo{
+    width: 20px;
+  height: 20px;
+  float: left;
+  
+      
+      
+  }
+  .titleMonth{
+   
+    font-weight:bold;
+    width: 50px;
+    
+  }
 
-.crumb {
-    display: inline-block;
-    float: right;
-}
+  .title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    float: left;
+  }
+  .titre{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bold;
+   font-size: 90px;
+   
+    text-align: left;
+  }
+
+  .titre2{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body{
+    background: linear-gradient(#4FC715, #4476A8);
+    font-family: sans-serif;
+    color: rgb(220,220,220);
+    width: 100vw;
+    overflow-x: hidden;
+    text-align: left;
+    font-size: 60px;
+    
+    position: fixed;
+    
+  }
+  h1,h2{
+    
+   
+    
+    font-size: 20px;
+  }
+  
 
 
-}
+
+
+
+  a{
+    color: inherit;
+  }
+  p{
+    margin-top: .7em;
+  }
+  .warning{
+    color: rgb(62,148,236);
+  }
+  .st_viewport{
+    max-height: 500px;
+    overflow: auto;
+  }
+
+  [data-table_id="0"]{
+    background-color: white;
+    opacity: 60;
+    color: black;
+  }
+  [data-table_id="1"]{
+    background-color: white;
+    opacity: 60;
+    color: black;
+  }
+  [data-table_id="2"]{
+    background-color: white;
+    opacity: 60;
+    color: black;
+  }
+  [data-table_id="3"]{
+    background-color: rgba(168,189,4, .8);
+    margin: 50px;
+  }
+  
+  ._rank{
+    min-width: 80px;
+    
+  }
+  ._id{
+    min-width: 60px;
+  }
+  ._luge
+  {
+    min-width: 130px;
+  }
+  ._pseudo{
+    min-width: 150px;
+    
+    
+    
+  }
+  ._temps{
+    min-width: 900px;
+    position: fixed;
+    
+  }
+  ._section{
+    min-width: 130px;
+  }
+  .medal{
+    
+    position: fixed;
+  }
+  pre{
+    
+  }
+  
+  /** Sticky table styles **/
+  .st_viewport{
+    background-color: rgb(62,148,236);
+    color: rgb(27,30,36);
+    margin: 20px 0;
+  }
+  /* ###  Table wrap */
+  .st_wrap_table{
+
+    
+ 
+  }
+
+
+  .tab{
+    position: relative;
+    border-radius: 5px 10px 0 5px;
+    animation-name: example;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    border:2px solid black;
+    border:2px solid black;
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+
+
+  }
+  /* ##   header */
+  .st_table_header{
+    position: -webkit-sticky;
+    
+    top: 0px;
+    z-index: 1;
+    background: linear-gradient(#4FC715, #4476A8); 
+    color:white;
+    
+    
+   
+
+  }
+  .st_table_header h2{
+    font-weight: 400;
+    margin: 0 20px;
+    padding: 20px 0 0;
+  }
+  .st_table_header .st_row{
+    color: white;
+  }
+  .st_table_header .st_column{
+    
+    font-size: 50px;
+  }
+  /* ##  table */
+  .st_table{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+            
+            margin-left: auto;
+            margin-right: auto;
+            width: 6ems;
+            border:2px solid linear-gradient(#4FC715, #4476A8);
+
+            
+
+         
+  }
+  /* #   row */
+  .st_row{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+  
+    
+    border: 1px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    
+    
+  }
+
+  .st_row1{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    
+    
+  }
+
+
+
+
+  .st_table .st_row:nth-child(even){
+    background-color: rgba(0,0,0, .1)
+    
+  }
+  /* #   column */
+  .st_column{
+    padding: 15px 30px;
+    text-align: right;
+    
+    
+  }
+
+
+  @keyframes example {
+    
+    
+    0%   {left:0px; top:0px;}
+    100%  {left:0px; top:-3500px;}
+    
+  }
