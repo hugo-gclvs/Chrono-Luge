@@ -5,7 +5,7 @@
 /*
    Cable marron : VCC (5V)
    Cable bleu : GND
-   Cable noir : Signal (Pin 2)
+   Cable noir : Signal (Pin 4 et 5)
 */
 /*
    Presence devant le capteur = LOW
@@ -28,6 +28,7 @@ void setup() {
     Serial.println("Erreur connection LoRa");
     while (1);
   }
+  LoRa.setSyncWord(0xF3);
 }
 
 void loop() {

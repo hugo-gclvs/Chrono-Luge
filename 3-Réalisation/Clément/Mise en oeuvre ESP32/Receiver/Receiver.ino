@@ -30,6 +30,7 @@ void setup() {
     display.drawString(5,25,"Connexion échouée");
     while (1);
   }
+  LoRa.setSyncWord(0xF3);
   Serial.println("Connecté");
   display.drawString(5,25,"LoRa Initializing OK!");
   display.display();
