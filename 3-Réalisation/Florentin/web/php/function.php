@@ -3,7 +3,7 @@
 function accesBDD(){
 
     try {
-        $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=classement;charset=utf8', 'root', '');
 
         foreach ($bdd->query('SELECT * from FOO') as $row) {
             print_r($row);
