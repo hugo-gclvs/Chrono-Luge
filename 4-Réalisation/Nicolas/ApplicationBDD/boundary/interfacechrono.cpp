@@ -20,19 +20,19 @@ InterfaceChrono::InterfaceChrono()
 }
 
 
-
 InterfaceChrono::~InterfaceChrono()
 {
 
 }
 
 
-
-
-
-bool InterfaceChrono::sauvegardeChrono(QString trame){
-
-    return  NULL;
+bool InterfaceChrono::sauvegardeChrono(QString trame)
+{
+    if(!m_GestionChrono->decoderTrame(trame))
+    {
+        qDebug()<<
+    }
+    return "";
 }
 
 
@@ -53,6 +53,14 @@ void InterfaceChrono::onReadyRead()
     QTcpSocket* client=static_cast<QTcpSocket*>(QObject::sender());
     QByteArray message = client->readAll();
     QDataStream flux(&message,QIODevice::ReadWrite);
+    QString trameSauvegarde;
+    flux >> trameSauvegarde;
+    qDebug() <<trameSauvegarde;
+    if(!sauvegardeChrono(trameSauvegarde))
+    {
+       qDebug()<<"Erreur de sauvegarde trame";
+    }
+
 }
 
 void InterfaceChrono::onDisconnect()

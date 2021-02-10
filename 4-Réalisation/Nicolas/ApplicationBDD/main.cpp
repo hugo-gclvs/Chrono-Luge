@@ -1,15 +1,16 @@
+#include <QCoreApplication>
 #include <stdio.h>
 #include "./boundary/interfacebdd.h"
 #include "./boundary/interfacechrono.h"
 
-int main()
+int main(int argc, char *argv[])
 {
 
-    while(1)
-    {
+    QCoreApplication a(argc, argv);
+
+
     InterfaceBDD interfaceBaseDeDonnee;
     InterfaceChrono interfaceChronometre;
-    }
 
-    return 0;
+    return a.exec();
 }

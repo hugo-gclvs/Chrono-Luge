@@ -5,7 +5,7 @@
 //  Original author: doulayn
 ///////////////////////////////////////////////////////////
 
-#include "./controller/gestionchrono.h"
+#include "../controller/gestionchrono.h"
 #include <QString>
 #include <QTcpServer>
 #include <QTcpSocket>

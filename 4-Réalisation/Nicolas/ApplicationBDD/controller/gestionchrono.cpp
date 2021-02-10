@@ -22,14 +22,57 @@ GestionChrono::~GestionChrono(){
 
 
 
-bool GestionChrono::sauvegardeChrono(QString tagRFID, double vitesse, double temps){
+bool GestionChrono::sauvegardeChrono(QString tagRFID, double vitesse, double temps)
+{
 
     return  NULL;
 }
 
+//trame de test $12599/2153/1bf3221a/ff*
+//reception = 12599 2153 1bf3221a ff
+//temps = 125.59
+//vitesse = 21.53
+//tagRFID = 1bf3221a
+//controleur = ff
+void GestionChrono::decoderTrame(QString trame)
+{
+    qDebug()<<trame;
 
-void GestionChrono::decoderTrame(QString trame){
+    QString temps,vitesse;
+    QString tagRFID;
+    QString controleur;
 
+    if(trame.startsWith=='$')
+    {
+        if(trame.endsWith=='*')
+        {
+            if(trameSeparer[3]=='ff')
+            {
+
+                temps=trameSeparer[0];
+                vitesse=trameSeparer[1];
+                tagRFID=trameSeparer[2];
+                controleur=trameSeparer[3];
+            }
+        }
+        else
+        {
+            qDebug()<<"trame incorrect2";
+        }
+    }
+    else
+    {
+        qDebug()<<"trame incorrect1";
+    }
+
+    QStringList trameSeparer = trame.split("/");
+
+
+
+    qDebug()<<temps;
+    qDebug()<<vitesse;
+    qDebug()<<tagRFID;
+    qDebug()<<controleur;
 }
 
 
