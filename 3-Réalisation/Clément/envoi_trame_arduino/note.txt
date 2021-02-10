@@ -1,0 +1,2 @@
+Les broches 0 et 1 (RX0 et TX0) sont déjà utilisé pour communiquer avec l'ordinateur, 
+il faut donc utiliser les broches 18 et 19 (RX1 et TX1). 

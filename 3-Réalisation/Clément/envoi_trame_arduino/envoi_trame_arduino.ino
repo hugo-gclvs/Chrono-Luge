@@ -1,59 +1,23 @@
 void setup() {
-  Serial.begin(9600);
+  #define RX1 19
+  #define TX1 18
+  pinMode(RX1, INPUT);
+  pinMode(TX1, OUTPUT);
+  Serial1.begin(9600);
 }
 
 void loop() {
-  Serial.write("<");
-  Serial.write("I");
-  Serial.write("D");
-  Serial.write("0");
-  Serial.write("0");
-  Serial.write(">");
 
-  Serial.write("<");
-  Serial.write("L");
-  Serial.write("1");
-  Serial.write(">");
+  Serial1.print("<ID00><BE><05><E>"); // trame de début
+  
+  Serial1.write("<ID00><L1><PA><FE><MA><WC><FE>"); // envoi de la première partie de la trame (code non variant utile à la configuration de l'affichage
+  Serial1.write("Hello"); // envoi du texte à afficher
+  Serial1.write("36"); //valeur du checksum
+  Serial1.write("<E>");
 
-  Serial.write("<");
-  Serial.write("P");
-  Serial.write("A");
-  Serial.write(">");
+  delay(500);
 
-  Serial.write("<");
-  Serial.write("F");
-  Serial.write("E");
-  Serial.write(">");
-
-  Serial.write("<");
-  Serial.write("M");
-  Serial.write("A");
-  Serial.write(">");
-
-  Serial.write("<");
-  Serial.write("W");
-  Serial.write("C");
-  Serial.write(">");
-
-  Serial.write("<");
-  Serial.write("F");
-  Serial.write("E");
-  Serial.write(">");
-
-  Serial.write("<");
-  Serial.write("b");
-  Serial.write("o");
-  Serial.write("n");
-  Serial.write("s");
-  Serial.write("o");
-  Serial.write("i");
-  Serial.write("r");
-
-  Serial.write("1");
-  Serial.write("5");
-
-  Serial.write("<");
-  Serial.write("E");
-  Serial.write(">");
+ 
+ 
 
 }
