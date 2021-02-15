@@ -24,6 +24,11 @@ GestionChrono::~GestionChrono(){
 
 bool GestionChrono::sauvegardeChrono(QString tagRFID, double vitesse, double temps)
 {
+    int numeroLuge;
+
+    m_InterfaceBDD->ajouterDescente(,,vitesse,temps);
+    numeroLuge = m_InterfaceBDD->getLuge(tagRFID);
+    encoderTrame();
 
     return  NULL;
 }
@@ -38,41 +43,30 @@ void GestionChrono::decoderTrame(QString trame)
 {
     qDebug()<<trame;
 
-    QString temps,vitesse;
-    QString tagRFID;
-    QString controleur;
-
-    if(trame.startsWith=='$')
-    {
-        if(trame.endsWith=='*')
-        {
-            if(trameSeparer[3]=='ff')
-            {
-
-                temps=trameSeparer[0];
-                vitesse=trameSeparer[1];
-                tagRFID=trameSeparer[2];
-                controleur=trameSeparer[3];
-            }
-        }
-        else
-        {
-            qDebug()<<"trame incorrect2";
-        }
-    }
-    else
-    {
-        qDebug()<<"trame incorrect1";
-    }
+    QString tempsConversion,vitesseConversion,tagRFID;
+    int nombreCarac;
+    double temps,vitesse;
 
     QStringList trameSeparer = trame.split("/");
 
+    tempsConversion=trameSeparer[0];
+    vitesseConversion=trameSeparer[1];
+    tagRFID=trameSeparer[2];
 
+    tempsConversion.insert(3,QString("."));
+    vitesseConversion.insert(2,QString("."));
+
+    temps=tempsConversion.toDouble();
+    vitesse=vitesseConversion.toDouble();
 
     qDebug()<<temps;
     qDebug()<<vitesse;
     qDebug()<<tagRFID;
-    qDebug()<<controleur;
+
+    /*Creer les entitées avec les data*/
+
+    sauvegardeChrono(tagRFID,vitesse,temps);
+
 }
 
 

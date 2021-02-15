@@ -28,11 +28,51 @@ InterfaceChrono::~InterfaceChrono()
 
 bool InterfaceChrono::sauvegardeChrono(QString trame)
 {
-    if(!m_GestionChrono->decoderTrame(trame))
+    QString controllerDeTrame;
+    int nombreCarac;
+
+    if(trame.startsWith("$"))
     {
-        qDebug()<<
+        if(trame.endsWith("*"))
+        {
+            trame.remove("$");
+            trame.remove("*");
+
+            nombreCarac=trame.count("/");
+
+            if(nombreCarac==3)
+            {
+                QStringList trameSeparer = trame.split("/");
+                controllerDeTrame=trameSeparer[3];
+
+                if(controllerDeTrame == "ff")
+                {
+                    m_GestionChrono->decoderTrame(trame);
+                    return 1;
+                }
+                else
+                {
+                    qDebug()<<"trame incorrect4";
+                    return 0;
+                }
+            }
+            else
+            {
+                qDebug()<<"trame incorrect3";
+                return 0;
+            }
+        }
+        else
+        {
+            qDebug()<<"trame incorrect2";
+            return 0;
+        }
     }
-    return "";
+    else
+    {
+        qDebug()<<"trame incorrect1";
+        return 0;
+    }
 }
 
 
@@ -56,9 +96,13 @@ void InterfaceChrono::onReadyRead()
     QString trameSauvegarde;
     flux >> trameSauvegarde;
     qDebug() <<trameSauvegarde;
-    if(!sauvegardeChrono(trameSauvegarde))
+    if(sauvegardeChrono(trameSauvegarde))
     {
-       qDebug()<<"Erreur de sauvegarde trame";
+        qDebug()<<"trame sauvegarder";
+    }
+    else
+    {
+        qDebug()<<"Erreur de conformite de la trame";
     }
 
 }
