@@ -28,7 +28,7 @@ private:
     QString prenomProfil;
     int ageProfil;
     QString mailProfil;
-    photo photoProfil;
+    int photoProfil;
 
 };
 #endif // PROFIL_H

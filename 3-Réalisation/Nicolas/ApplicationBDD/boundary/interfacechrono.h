@@ -7,14 +7,17 @@
 
 #include "../controller/gestionchrono.h"
 #include <QString>
-
+#include <QTcpServer>
+#include <QTcpSocket>
+#include <QDataStream>
 
 #ifndef INTERFACECHRONO_H
 #define INTERFACECHRONO_H
 
 
-class InterfaceChrono
+class InterfaceChrono : public QTcpServer
 {
+    Q_OBJECT
 
 public:
     InterfaceChrono();
@@ -28,6 +31,11 @@ private:
     QString trame;
     QString ip;
     int port;
+
+private slots :
+    void onNewConnection();
+    void onReadyRead();
+    void onDisconnect();
 
 };
 #endif // INTERFACECHRONO_H
