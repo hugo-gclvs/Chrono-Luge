@@ -2,7 +2,7 @@
 
 WiFiManager wm;
 const char* ssid = "ESP32AP";
-const char* password = "devkit1234";
+const char* password = "123456789";
 
 
 void setup() {

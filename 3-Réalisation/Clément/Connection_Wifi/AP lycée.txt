@@ -1,0 +1,2 @@
+SSID : BTSSN
+PASSWORD : btssn-queneau

@@ -1,11 +1,11 @@
 #include <Arduino.h>
 #include "WiFi.h"
 
-#define WIFI_NETWORK "F_"
-#define WIFI_PASSWORD "Fontenay,1234"
+#define WIFI_NETWORK "BTSSN"
+#define WIFI_PASSWORD "btssn-queneau"
 #define WIFI_TIMEOUT_MS 20000
 
-void connectToWifi(){
+void connectionAuWifi(){
   Serial.print("Tentative de connection");
   WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_NETWORK, WIFI_PASSWORD);
@@ -29,7 +29,7 @@ void connectToWifi(){
 
 void setup() {
   Serial.begin(9600);
-  connectToWifi();
+  connectionAuWifi();
 
 }
 
