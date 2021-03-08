@@ -10,6 +10,18 @@
 
 #include <QString>
 #include <QDateTime>
+#include <QApplication>
+#include <QCoreApplication>
+#include <QSql>
+#include <QSqlDatabase>
+#include <QDebug>
+#include <QSqlQuery>
+#include <QDate>
+#include <QSqlError>
+#include <QSqlTableModel>
+#include <QSqlRelationalTableModel>
+#include <QSqlRecord>
+#include <QTableView>
 
 class InterfaceBDD
 {
@@ -20,7 +32,7 @@ public:
 
     bool connectBDD();
     bool ajouterDescente(QTime heureDescente, QDate dateDescente, double vitesseDescente, double tempsDescente);
-    bool ajouterProfil(photo photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil);
+    bool ajouterProfil(int photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil);
     bool ajouterLuge(QString QRCodeLuge, QString tagRFIDLuge, int numeroLuge);
     bool supprimerLuge(QString tagRFIDLuge, int numeroLuge);
     bool modifierPiste(int taillePiste);

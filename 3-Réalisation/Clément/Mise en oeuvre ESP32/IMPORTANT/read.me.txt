@@ -1,6 +1,6 @@
 PREPARATION DE L'ENVIRONNEMENT
 
-bibliothèque : https://resource.heltec.cn/download/package_heltec_esp32_index.json
+bibliothèque (carte) : https://resource.heltec.cn/download/package_heltec_esp32_index.json
 
 Inclure les trois bibliothèques suivante : 
 https://resource.heltec.cn/download/package_heltec_esp32_index.json

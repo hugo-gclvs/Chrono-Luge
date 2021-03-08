@@ -8,8 +8,10 @@
 #include "interfacebdd.h"
 
 
-InterfaceBDD::InterfaceBDD(){
 
+InterfaceBDD::InterfaceBDD()
+{
+    connectBDD();
 }
 
 
@@ -24,7 +26,23 @@ InterfaceBDD::~InterfaceBDD(){
 
 bool InterfaceBDD::connectBDD(){
 
-    return  NULL;
+    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+    db.setHostName("localhost");
+    db.setPort(3307);
+    db.setDatabaseName("chronoluge");
+    db.setUserName("root");
+    db.setPassword("Azerty*123");
+
+    if(db.open())
+    {
+        qDebug()<<"Connexion Reussie";
+    }
+    else
+    {
+        qDebug()<<"Connexion echoue";
+    }
+
+    return  false;
 }
 
 
@@ -34,7 +52,7 @@ bool InterfaceBDD::ajouterDescente(QTime heureDescente, QDate dateDescente, doub
 }
 
 
-bool InterfaceBDD::ajouterProfil(photo photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil){
+bool InterfaceBDD::ajouterProfil(int photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil){
 
     return  NULL;
 }

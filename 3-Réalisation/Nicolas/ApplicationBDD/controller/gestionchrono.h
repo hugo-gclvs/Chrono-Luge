@@ -29,5 +29,6 @@ public:
     int getTaillePiste(int numeroLuge);
     QString stockerRFID(QString tagRFIDLuge);
 
+
 };
 #endif //GESTIONCHRONO_H

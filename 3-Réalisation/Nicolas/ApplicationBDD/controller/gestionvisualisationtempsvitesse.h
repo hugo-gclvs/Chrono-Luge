@@ -9,6 +9,7 @@
 #include "../entity/piste.h"
 #include "../boundary/interfacebdd.h"
 #include <QString>
+#include "../entity/profil.h"
 
 
 #ifndef GESTIONVISUALISATIONTEMPSVITESSE_H
@@ -24,7 +25,8 @@ public:
     Profil *m_Profil;
     InterfaceBDD *m_InterfaceBDD;
 
-    bool ajouterProfil(photo photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil);
+
+    bool ajouterProfil(int photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil);
     bool lierProfilDescente(int idProfil, QString QRCode);
     bool rechercheHistoriqueDescente(int idProfil);
     bool rechercheStatistique(int idProfil);

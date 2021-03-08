@@ -22,7 +22,7 @@ GestionVisualisationTempsVitesse::~GestionVisualisationTempsVitesse(){
 
 
 
-bool GestionVisualisationTempsVitesse::ajouterProfil(photo photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil){
+bool GestionVisualisationTempsVitesse::ajouterProfil(int photoProfil, QString mailProfil, int ageProfil, QString prenomProfil, QString nomProfil){
 
     return  NULL;
 }
