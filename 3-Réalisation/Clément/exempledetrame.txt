@@ -1,4 +1,7 @@
 
+Serial.write("<ID01><BE><05><E>");
+
+
   //trame pour l'affichage du message "Hello"
   /* Serial.write("<ID00><L1><PA><FE><MA><WC><FE>"); // envoi de la première partie de la trame (code non variant utile à la configuration de l'affichage
     Serial.write("Hello"); // envoi du texte à afficher
@@ -16,3 +19,11 @@
     Serial1.write("Test"); // envoi du texte à afficher
     Serial1.write("42"); //valeur du checksum
     Serial1.write("<E>");*/
+
+000000: <ID00><BE>05<E><ID00><L1><PA><FE><MA><WC><FE>bonjour15<E><ID00><BF>06<E> -> bonjour
+
+000000: <ID00><BE>05<E><ID00><L1><PA><FE><MA><WC><FE><CA>bonjour15<E><ID00><BF>06<E> -> bonjour de couleur rouge
+
+000000: <ID00><BE>05<E><ID00><L1><PA><FE><MA><WC><FE><CD>bonjour10<E><ID00><BF>06<E> bonjour de couleur verte
+
+000000: <ID00><BE>05<E><ID00><L1><PA><FA><MA><WC><FE>bonjour11<E><ID00><BF>06<E> bonjour avec effet "immediate"
