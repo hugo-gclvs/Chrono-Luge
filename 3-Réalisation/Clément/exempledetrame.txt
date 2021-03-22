@@ -20,7 +20,7 @@ Serial.write("<ID01><BE><05><E>");
     Serial1.write("42"); //valeur du checksum
     Serial1.write("<E>");*/
 
-000000: <ID00><BE>05<E><ID00><L1><PA><FE><MA><WC><FE>bonjour15<E><ID00><BF>06<E> -> bonjour
+000000: <ID00><BE>05<E><ID00><L1><PA><FE><MA><WC><FE>bonjour15<E><ID00><BF>06<E> -> bonjour de couleur orange
 
 000000: <ID00><BE>05<E><ID00><L1><PA><FE><MA><WC><FE><CA>bonjour15<E><ID00><BF>06<E> -> bonjour de couleur rouge
 
