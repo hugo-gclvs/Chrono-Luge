@@ -1,1 +1,1 @@
-Projet de deuxième année BTS Système Numérique
+Projet de deuxième année BTS Systèmes Numériques
