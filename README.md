@@ -1,6 +1,6 @@
 Projet Chrono'Luge : BTS Systèmes Numériques à Lycée Raymond Queneau.
 
-Réaliser par: 
+Réalisé par: 
 BOULENGER Thomas
 FONTENAY Clément
 DOULAY Nicolas
