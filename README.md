@@ -1,1 +1,1 @@
-Projet de deuxième année BTS Systèmes Numériques
+Projet Chrono'Luge : BTS Systèmes Numériques à Lycée Raymond Queneau
